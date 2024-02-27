@@ -1,0 +1,84 @@
+@import "./variables.scss";
+@import "./main.scss";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font: $font-stack;
+    color: $primary-color;
+    background-color: $background-color;
+}
+
+.loader {
+    color: $loader-color;
+}
+
+.error {
+    color: $error-color;
+}
+
+.header {
+    display: flex;
+    width: $width;
+
+    &__position {
+        display: inline-block;
+        margin: 0 20px 10px 0;
+        color: black;
+        font-size: 50px;
+        font-weight: 800;
+    }
+
+    &__action {
+        display: inline-block;
+        color: black;
+        font-size: 24px;
+        font-weight: 300;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: left;
+    width: $width;
+
+    &__release {
+        width: 150px;
+        text-align: left;
+        color: silver;
+    }
+}
+
+.dev {
+    position: fixed;
+    bottom: 0;
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid silver;
+    border-radius: 5px;
+
+    &__colors {
+        display: grid;
+        grid-template-columns: repeat(11, 1fr);
+        grid-gap: 20px;
+
+        &_caption {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        &_color {
+            padding: 5px;
+            text-align: center;
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+}

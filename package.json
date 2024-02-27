@@ -1,0 +1,25 @@
+{
+  "name": "react-ranges-mtt",
+  "private": true,
+  "version": "1.2.0",
+  "repository": "https://github.com/dementiev-net/react-ranges-mtt",
+  "author": "Dmitry Dementiev <info@dementiev.net>",
+  "license": "ISC",
+  "description": "NODE.JS Server + React.js app (Poker Ranges Mtt Helper)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "npx nodemon",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "config": "^3.3.11",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}

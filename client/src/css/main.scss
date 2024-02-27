@@ -1,0 +1,280 @@
+.main-top {
+    display: flex;
+    margin-bottom: 40px;
+    width: $width;
+
+    &__chart {
+        width: 640px;
+
+        .range {
+            margin: 0 10px 10px 0;
+            border: 1px solid silver;
+            border-radius: 5px;
+            box-shadow: 0 2px 2px silver;
+
+            tr {
+                padding: 0;
+                margin: 0;
+            }
+
+            th {
+                text-align: left;
+            }
+
+            td {
+                width: 45px;
+                height: 44px;
+                font-size: 16px;
+                text-align: center;
+            }
+
+            .pocket {
+                font-size: 24px;
+            }
+        }
+    }
+
+    &__info {
+        width: 360px;
+
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 3px;
+            align-content: start;
+            gap: 5px;
+            width: 100%;
+
+            &__item {
+                padding: 4px 8px;
+                border-radius: 3px;
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+
+        .random {
+            width: 170px;
+            margin-bottom: 30px;
+
+            &__number {
+                color: black;
+                font-size: 70px;
+                font-weight: 200;
+                text-align: right;
+            }
+
+            &__line {
+                background: $random_color;
+                height: 10px;
+                width: 100%;
+            }
+        }
+
+        .stack {
+            height: 40px;
+            margin: 10px 20px 50px 0;
+            font-size: 24px;
+        }
+
+        .select {
+            display: inline-block;
+            padding: 7px 10px 0 0;
+            color: black;
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+}
+
+.main {
+    margin-bottom: 10px;
+    width: $width;
+
+    &__count {
+        margin-left: 10px;
+        border: 1px solid $count_color;
+        color: $count_color;
+        border-radius: 50%;
+        padding: 2px 6px;
+        font-size: 12px;
+        font-weight: 600;
+
+        &_active {
+            color: white;
+            background-color: red;
+            border-color: red;
+        }
+    }
+
+    &__header {
+        margin: 0 0 15px 0;
+        padding: 0;
+        font-weight: 600;
+        font-size: 24px;
+        text-align: center;
+
+        &_blinde {
+            font-size: 30px;
+            margin: 0 0 8px 0;
+        }
+
+        &_active {
+            color: $header-active-color;
+        }
+    }
+
+    &__item {
+        width: 100px;
+        position: relative;
+    }
+
+    .board {
+        position: relative;
+        border: 3px solid silver;
+        box-shadow: 0 2px 2px silver;
+
+        width: 850px;
+        height: 400px;
+        margin: 140px 0 0 70px;
+        border-radius: 250px 250px 200px 200px;
+
+        &__line {
+            position: absolute;
+            top: 35px;
+            left: 55px;
+            width: 730px;
+            height: 300px;
+            border: 1px solid silver;
+            border-radius: 300px 300px 200px 200px;
+        }
+
+        &__boxes {
+            position: absolute;
+            padding: 10px;
+            border: 0.2em solid gray;
+            border-radius: 30px;
+            background-color: white;
+
+            &.box1 {
+                bottom: -50px;
+                left: 360px;
+            }
+
+            &.box2 {
+                left: 100px;
+                bottom: -10px;
+            }
+
+            &.box3 {
+                left: -60px;
+                top: 70px;
+            }
+
+            &.box4 {
+                top: -70px;
+                left: 130px;
+            }
+
+            &.box5 {
+                top: -130px;
+                right: 360px;
+            }
+
+            &.box6 {
+                top: -70px;
+                right: 140px;
+            }
+
+            &.box7 {
+                right: -60px;
+                top: 70px;
+            }
+
+            &.box8 {
+                right: 110px;
+                bottom: -10px;
+            }
+
+            &.reset {
+                right: 310px;
+                bottom: 180px;
+                border: 0;
+                background-color: transparent;
+            }
+        }
+    }
+
+    .button {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+
+        &__item {
+            display: inline-block;
+            box-sizing: border-box;
+            margin: 0 0 15px;
+            width: 100px;
+            height: 38px;
+            outline: none;
+            border: none;
+            border-radius: 20px;
+            line-height: 40px;
+            font-size: 17px;
+            text-decoration: none;
+            color: #007AFF;
+            background-color: #E9E9EA;
+            cursor: pointer;
+            user-select: none;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            touch-action: manipulation;
+
+            &:focus-visible {
+                box-shadow: 0 0 0 2px #666;
+            }
+
+            &:hover {
+                background-color: #DBE7F2;
+            }
+
+            &:active {
+                transform: scale(0.96);
+            }
+
+            &:disabled {
+                color: #888888;
+                pointer-events: none;
+                opacity: 0.65;
+            }
+
+            &_pos {
+            }
+
+            &_limp {
+            }
+
+            &_raise {
+                font-weight: 600;
+            }
+
+            &_def {
+                height: 91px;
+            }
+
+            &_reset {
+                height: 60px;
+                width: 200px;
+                color: white;
+                border-radius: 30px;
+                background-color: #007AFF;
+                font-weight: 600;
+
+                &:hover {
+                    background-color: #006DE7;
+                }
+            }
+        }
+    }
+}
